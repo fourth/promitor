@@ -74,7 +74,7 @@ namespace Promitor.Core.Scraping
                     aggregationType,
                     aggregationInterval.Value);
 
-                LogMeasuredMetrics(scrapeDefinition, scrapedMetricResult, aggregationInterval);
+                // LogMeasuredMetrics(scrapeDefinition, scrapedMetricResult, aggregationInterval);
 
                 await _metricSinkWriter.ReportMetricAsync(scrapeDefinition.PrometheusMetricDefinition.Name, scrapeDefinition.PrometheusMetricDefinition.Description, scrapedMetricResult);
             }
